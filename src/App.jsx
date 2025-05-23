@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import './styles/App.css';
 import HeroSection from './components/HeroSection';
 import AboutMe from './components/AboutMe';
@@ -7,7 +7,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Contacts from './components/Contact';
-import Navigation from './components/Navigation';-[]
+import Navigation from './components/Navigation';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,6 +34,8 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contacts />} />
+          {/* Fallback route to redirect to the homepage */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
     </div>
