@@ -1,0 +1,147 @@
+.skills-section {
+  padding-top: 5rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.skills-card {
+  backdrop-filter: blur(10px);
+  background-color: var(--glass-medium);
+  border: 1px solid var(--glass-heavy);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+}
+
+.skills-card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.skills-card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.technical .skills-card-number {
+  background-color: var(--neon-blue);
+  color: var(--cyber-dark);
+}
+
+.soft .skills-card-number {
+  background-color: var(--neon-purple);
+  color: var(--cyber-dark);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skill-item {
+  margin-bottom: 1.25rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.skill-percentage {
+  font-size: 0.875rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.skill-percentage.active {
+  color: var(--neon-blue);
+}
+
+.skill-bar {
+  height: 0.5rem;
+  background-color: var(--cyber-dark);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: var(--cyber-accent);
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+
+.skill-progress.active {
+  background: linear-gradient(to right, var(--neon-blue), var(--neon-purple));
+}
+
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.soft-skill {
+  padding: 1rem;
+  background-color: var(--cyber-dark);
+  border: 1px solid var(--glass-medium);
+  border-radius: 0.75rem;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.soft-skill:hover {
+  border-color: var(--neon-pink);
+}
+
+.soft-skill span {
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.soft-skill:hover span {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .skills-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
