@@ -42,7 +42,7 @@ const HeroSection = () => {
             className="hero-image"
           />
           <div className="year-badge">
-            <span>2024</span>
+            <span>2025</span>
           </div>
         </div>
         

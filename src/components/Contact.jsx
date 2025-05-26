@@ -46,7 +46,7 @@ const Contacts = () => {
           <ContactCard 
             icon={<FaMapMarkerAlt />}
             title="Location"
-            value="Meru, Kenya"
+            value="Kitui, Kenya"
           />
         </div>
 
