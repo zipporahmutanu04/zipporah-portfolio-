@@ -24,7 +24,7 @@ const educationList = [
   {
     institution: 'Waita Progressive Academy',
     degree: 'Primary Education',
-    details: 'Completed KCPE examinations in 2018.',
+    details: 'Completed KCPE examinations.',
     icon: '📚',
   },
 ];
